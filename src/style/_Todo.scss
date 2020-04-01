@@ -1,0 +1,179 @@
+@import "variables.scss";
+
+// All icons
+.icon {
+  opacity: 0.625;
+  font-size: 0.8em;
+}
+
+//section for todo toggle
+.todo-toggle-wrapper {
+  position: fixed;
+  bottom: 1em;
+  right: 0.5em;
+
+  .todo-toggle-container {
+    position: relative;
+    bottom: 2em;
+    right: 0;
+  }
+
+  .todo-toggle {
+    position: fixed;
+    bottom: 1.35em;
+    right: 1.2em;
+    color: $text-primary;
+    font-weight: 500;
+    font-size: 1.1em;
+    opacity: 0.8;
+    cursor: default;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// section for the whole todo container box
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $text-primary;
+  background-color: $bg-primary;
+  max-width: 20em;
+  height: 80%;
+  border-radius: $border-radius;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0.8em;
+}
+
+/* responsive container height when page gets smaller (height) than 320px */
+
+// Today Header
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .icon-header {
+    opacity: 0.625;
+    font-size: 0.8em;
+    margin: 0.5em 0.68em 0.5em 0.3em;
+  }
+
+  h1 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0 0 0px 5px;
+  }
+}
+
+// New Item Input
+.form-container {
+  font-size: 1em;
+  width: 320px;
+
+  .input-text {
+    border: none;
+    background-color: $bg-translucent;
+    opacity: 1;
+    outline: none;
+    color: $text-primary;
+    font-size: 1em;
+    margin: 10px 0 5px 5px;
+    width: 95%;
+  }
+  .input-text::placeholder {
+    font-size: 1em;
+    width: 100%;
+  }
+  .input-submit {
+    display: none;
+  }
+}
+
+// list of todos
+.todo-list {
+  height: 50%;
+  overflow: scroll;
+}
+
+// Each individual item in the todo list
+.todo-item {
+  list-style-type: none;
+  margin: 0.4em 0.5em 0.2em 0;
+  line-height: 1.25;
+  word-wrap: break-word;
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .todo-left {
+    width: 100%;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.1);
+    border: none;
+    margin: 0.4em 0.7em 0 0.7em;
+  }
+
+  .todo-item-title {
+    background-color: $bg-translucent;
+    opacity: 1;
+    border: none;
+    outline: none;
+    color: $text-primary;
+    font-size: 1em;
+    cursor: default;
+    width: 90%;
+
+    &:focus {
+      opacity: 0.625;
+    }
+  }
+
+  button {
+    justify-self: flex-end;
+    opacity: 1;
+    background-color: $bg-translucent;
+    border: none;
+    color: $text-primary;
+  }
+}
+
+// pop-up menu
+.mini-menu {
+  list-style-type: none;
+  width: 8em;
+  border-radius: $border-radius;
+  background-color: $bg-secondary;
+  opacity: 1;
+  position: absolute;
+  margin-top: -148px;
+  margin-left: -135px;
+  z-index: 1;
+
+  hr {
+    opacity: 0.625;
+    font-size: 0.8em;
+  }
+
+  li {
+    display: block;
+    margin: 5px 0;
+
+    &:hover {
+      background-color: $bg-hover;
+    }
+
+    button {
+      font-size: 0.9em;
+      margin: 0.1em 0.5em;
+      padding: 0.2em 0 0.2em 0.5em;
+    }
+  }
+}

@@ -1,0 +1,350 @@
+@import "variables.scss";
+
+// Section for the "links" toggle
+.link-toggle-wrapper {
+  position: fixed;
+  top: 1em;
+  left: 1.5em;
+  cursor: auto;
+
+  .link-toggle-container {
+    position: relative;
+    top: 2em;
+    left: -1em;
+    cursor: auto;
+
+    .link-toggle {
+      position: fixed;
+      top: 1.35em;
+      left: 1.2em;
+      color: $text-primary;
+      font-weight: 500;
+      font-size: 1.1em;
+      opacity: 0.8;
+      cursor: default;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// The full box for the links
+.link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $text-primary;
+  background-color: $bg-primary;
+  min-width: 15em;
+  border-radius: $border-radius;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0.8em 0.6em;
+}
+
+// displaying links list
+.links-wrapper {
+  li {
+    margin: 0.6em 0 0.6em 0;
+    width: 100%;
+    list-style-type: none;
+
+    a {
+      color: $text-primary;
+      opacity: 0.8;
+      font-size: 1em;
+      margin: 1em 0.5em;
+      text-decoration: none;
+      width: 100%;
+      &:hover {
+        opacity: 1;
+      }
+      .icon {
+        font-size: 1em;
+        opacity: 0.9;
+        margin: 0 0.5em 0 0;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// displaying created links
+.links-list {
+  li {
+    margin: 0em 0 0.6em 0;
+    width: 100%;
+    list-style-type: none;
+
+    a {
+      color: $text-primary;
+      opacity: 0.8;
+      font-size: 1em;
+      margin: 1em 0.5em;
+      text-decoration: none;
+      width: 100%;
+      &:hover {
+        opacity: 1;
+      }
+      .icon {
+        font-size: 1em;
+        opacity: 0.5;
+        margin: 0 0.5em 0 0;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Hide default empty link item
+// .link-item-wrapper:first-child {
+//   display: none;
+// }
+
+// flex links and ellipsis
+.link-item {
+  list-style-type: none;
+  margin: 0.4em 0.5em 0.2em 0;
+  line-height: 1.25;
+  word-wrap: break-word;
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .link-left {
+    width: 100%;
+  }
+
+  span {
+    position: relative;
+    margin-right: 0.3em;
+  }
+
+  button {
+    justify-self: flex-end;
+    opacity: 1;
+    background-color: $bg-translucent;
+    border: none;
+    color: $text-primary;
+  }
+}
+
+// New Link button
+.link-input-button-container {
+  font-size: 1em;
+  width: 100%;
+
+  .input-link-button {
+    border: none;
+    background-color: $bg-translucent;
+    opacity: 0.5;
+    outline: none;
+    color: $text-primary;
+    font-size: 1em;
+    margin: 0 0.5em 0.3em 0.5em;
+    width: 13em;
+    text-align: left;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// New Link Input
+.link-input-container {
+  font-size: 1em;
+  width: 14em;
+  padding: 0.5em;
+
+  button {
+    border: none;
+    background-color: $bg-translucent;
+    opacity: 0.8;
+    outline: none;
+    color: $text-primary;
+    margin-left: 0.3em;
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .icon {
+    font-size: 1.3em;
+    margin: 0 0 0.8em 0;
+  }
+
+  label {
+    opacity: 0.7;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+
+  .input-link-container {
+    margin: 0 0 1em 0;
+  }
+
+  .input-link,
+  .input-link-name {
+    border: none;
+    background-color: $bg-translucent;
+    opacity: 0.8;
+    outline: none;
+    color: $text-primary;
+    font-size: 1em;
+    font-weight: 400;
+    width: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    line-height: 2;
+
+    .input-link {
+      margin: 1em;
+    }
+
+    &:focus {
+      opacity: 0.9;
+      border-bottom: 2px solid $text-primary;
+    }
+
+    &::active {
+      opacity: 0.9;
+    }
+  }
+  .input-link::placeholder {
+    font-size: 1em;
+    width: 100%;
+  }
+  .input-link-submit {
+    border-radius: 50px;
+    border: none;
+    margin: 0.5em 0 0 0;
+    padding: 0.6em 1.8em 0.6em 1.8em;
+    font-size: 0.9em;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: $text-primary;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+// add another tab button
+.pro-button {
+  margin: 0.5em 0 1em 0;
+  font-size: 0.85em;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Pro pop up
+.pro-link-container {
+  width: 14em;
+  height: 15em;
+  // background-color: rgba(0, 0, 0, 0.932);
+
+  .pro-link {
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+
+    h4,
+    h3,
+    h2 {
+      font-weight: 400;
+      text-align: center;
+      margin: 0.3em 0;
+    }
+    h3 {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.65em;
+      opacity: 0.625;
+    }
+
+    h2 {
+      font-size: 1em;
+      opacity: 0.9;
+    }
+
+    h4 {
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  }
+
+  .icon-button {
+    background-color: $bg-translucent;
+    font-size: 1.3em;
+    border: none;
+    background-color: $bg-translucent;
+    opacity: 0.8;
+    outline: none;
+    color: $text-primary;
+    position: fixed;
+    left: 10em;
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .button-learn {
+    font-size: 0.9em;
+    border-radius: 50px;
+    border: none;
+    margin: 0.5em 1.2em 0 1.2em;
+    padding: 0.7em 1.6em;
+    background: linear-gradient(70deg, #08a7c7, #08c7a1);
+    color: $text-primary;
+
+    a {
+      text-decoration: none;
+      color: $text-primary;
+    }
+  }
+}
+
+// pop-up menu
+.mini-link-menu {
+  list-style-type: none;
+  width: 5em;
+  border-radius: $border-radius;
+  background-color: $bg-secondary;
+  opacity: 1;
+  margin-top: -72px;
+  margin-left: -85px;
+  position: absolute;
+  z-index: 1;
+  li {
+    display: block;
+    margin: 5px 0;
+
+    &:hover {
+      background-color: $bg-hover;
+    }
+
+    button {
+      font-size: 0.9em;
+      margin: 0.1em 0.5em;
+      padding: 0.2em 0 0.2em 0.5em;
+    }
+  }
+}
+
+.mini-link-menu-button {
+  .icon {
+    position: absolute;
+  }
+}
