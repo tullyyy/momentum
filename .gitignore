@@ -13,3 +13,4 @@ yarn-error.log
 phploy.ini
 
 /public/js
+/public/mix-manifest.json
