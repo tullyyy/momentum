@@ -32,12 +32,11 @@ class App extends Component {
                 <LinkToggle />
                 <AboutToggle />
                 <TodoToggle />
-                {/* <div className="App"> */}
+
                 <Clock />
                 <Greeting />
                 <MainFocus />
                 <RandomQuote />
-                {/* </div> */}
             </div>
         );
     }

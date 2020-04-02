@@ -1,5 +1,5 @@
 .greeting {
-    font-size: 51px;
+    font-size: 54px;
     text-align: center;
     font-weight: 500;
     display: flex;
@@ -29,7 +29,7 @@
 }
 < AutosizeInput /> 
 */
-    min-width: 70px;
+    min-width: 4em;
 }
 
 .greeting__form {

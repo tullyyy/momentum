@@ -1,5 +1,5 @@
 .clock {
-    font-size: 160px;
+    font-size: 10.5em;
     color: #ffffff;
     font-weight: 500;
     user-select: none;
@@ -8,4 +8,5 @@
     line-height: 1;
     letter-spacing: -5px;
     z-index: 1;
+    margin-top: 1em;
 }

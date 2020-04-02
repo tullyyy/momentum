@@ -13,13 +13,3 @@ body {
     color: #ffffff;
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
-
-/* .App {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    z-index: 1;
-    opacity: 1;
-} */
