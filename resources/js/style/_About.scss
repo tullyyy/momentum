@@ -2,111 +2,112 @@
 
 // Toggling the About container from the link "About"
 .about-toggle-wrapper {
-  position: fixed;
-  bottom: 2em;
-  left: 0.5em;
-  cursor: auto;
-  .about-toggle-container {
-    position: relative;
-    bottom: 1em;
-    left: 0;
+    position: fixed;
+    bottom: 2em;
+    left: 0.5em;
+    z-index: 1;
     cursor: auto;
-    .about-toggle {
-      position: fixed;
-      bottom: 1.35em;
-      left: 1.2em;
-      color: $text-primary;
-      font-weight: 500;
-      font-size: 1.1em;
-      opacity: 0.8;
-      cursor: default;
-      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    .about-toggle-container {
+        position: relative;
+        bottom: 1em;
+        left: 0;
+        cursor: auto;
+        .about-toggle {
+            position: fixed;
+            bottom: 1.35em;
+            left: 1.2em;
+            color: $text-primary;
+            font-weight: 500;
+            font-size: 1.1em;
+            opacity: 0.8;
+            cursor: default;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 
-      &:hover {
-        opacity: 1;
-      }
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
-  }
 }
 
 // The full container
 .about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: $text-primary;
-  background-color: $bg-primary;
-  max-width: 40em;
-  border-radius: $border-radius;
-  font-size: 1em;
-  font-weight: 300;
-  padding: 2.3em;
-  width: 100%;
-
-  h2,
-  h3 {
-    font-size: 1em;
-    margin: 0.5em;
-    font-weight: 500;
-  }
-
-  h1,
-  h3,
-  h4 {
-    text-align: center;
-  }
-
-  h1 {
-    opacity: 1;
-    font-size: 1.5em;
-    margin-bottom: 1em;
-  }
-
-  h4 {
-    font-size: 0.85em;
-    opacity: 0.5;
-    font-weight: 300;
-    margin-top: 3em;
-  }
-
-  a {
-    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: $text-primary;
-    opacity: 0.625;
-    font-weight: 600;
-    padding: 1em;
-    text-align: center;
-  }
-
-  p {
-    opacity: 0.8;
-    margin: 1em 1em 1.5em 1em;
-  }
-  .heart {
-    color: red;
-  }
-
-  .about-thumbnails {
-    display: flex;
-    justify-content: center;
-    .about-thumbnails-card {
-      display: flex;
-      flex-direction: column;
-      margin: 0 1em;
-      img {
-        border-radius: 50%;
-        height: 6em;
-        margin: 0 1em 0 1em;
-      }
-    }
-  }
-
-  .about-links {
+    background-color: $bg-primary;
+    max-width: 40em;
+    border-radius: $border-radius;
+    font-size: 1em;
+    font-weight: 300;
+    padding: 2.3em;
     width: 100%;
-    border-top: 1px solid $text-primary;
-    border-bottom: 1px solid $text-primary;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
+
+    h2,
+    h3 {
+        font-size: 1em;
+        margin: 0.5em;
+        font-weight: 500;
+    }
+
+    h1,
+    h3,
+    h4 {
+        text-align: center;
+    }
+
+    h1 {
+        opacity: 1;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    h4 {
+        font-size: 0.85em;
+        opacity: 0.5;
+        font-weight: 300;
+        margin-top: 3em;
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-primary;
+        opacity: 0.625;
+        font-weight: 600;
+        padding: 1em;
+        text-align: center;
+    }
+
+    p {
+        opacity: 0.8;
+        margin: 1em 1em 1.5em 1em;
+    }
+    .heart {
+        color: red;
+    }
+
+    .about-thumbnails {
+        display: flex;
+        justify-content: center;
+        .about-thumbnails-card {
+            display: flex;
+            flex-direction: column;
+            margin: 0 1em;
+            img {
+                border-radius: 50%;
+                height: 6em;
+                margin: 0 1em 0 1em;
+            }
+        }
+    }
+
+    .about-links {
+        width: 100%;
+        border-top: 1px solid $text-primary;
+        border-bottom: 1px solid $text-primary;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
 }
