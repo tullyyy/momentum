@@ -1,0 +1,12 @@
+.clock { 
+  font-size: 160px;
+  color: #ffffff;
+  font-weight: 500;
+  user-select: none; 
+  cursor: default;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: -5px;
+}
+
+

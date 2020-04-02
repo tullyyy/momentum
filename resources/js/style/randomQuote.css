@@ -1,0 +1,36 @@
+.quote-wrapper { 
+  width: 100%;
+  text-shadow: 0 1px 5px rgba(0,0,0,.1);
+  font-size: 15.2px;
+  font-weight: 300; 
+  position: absolute; 
+  bottom: 10px;
+  padding: 0 20%;
+  text-align: center; 
+} 
+
+.quote-body {
+  width: 80%;
+  display: block;
+  position: relative;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.quote-box { 
+  font-size:13.3px;
+  opacity:0.75;
+  overflow: hidden; 
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+
+.bird { 
+  color: #ffffff;
+  margin-left: 8px;
+} 
+
+.quote-wrapper:hover .quote-box { 
+  transition: max-height .5s ease-in;
+  max-height: 100px;
+}
