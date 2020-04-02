@@ -1,40 +1,37 @@
-.greeting { 
-  font-size: 51px;
-  text-align: center;
-  font-weight: 500;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-
-  user-select: none; 
-  cursor: default;
-  margin: 0 auto;
+.greeting {
+    font-size: 51px;
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    user-select: none;
+    cursor: default;
+    margin: 0 auto;
 }
 
-.greeting__input input{ 
-  background-color: rgba(0,0,0,0);
-  border: none;
-  border-bottom: 2px #fff solid;
-  padding-bottom: 5px;
-  
-  font-family:inherit;
-  font-size: inherit; 
-  font-weight: inherit;
-  color: #ffffff;
-  text-shadow: 0 1px 5px rgba(0,0,0,.1);
-  outline: none; 
-  /*By default, some browsers will add a blue outline around the input when it gets focus (clicked on) 
+.greeting__input input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 2px #fff solid;
+    padding-bottom: 5px;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: #ffffff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    /*By default, some browsers will add a blue outline around the input when it gets focus (clicked on) 
   input[type=text] {
 }
 < AutosizeInput /> 
 */
-  min-width: 70px;
+    min-width: 70px;
 }
 
-.greeting__form { 
-  display: inline-block;
+.greeting__form {
+    display: inline-block;
 }
-
-
-
