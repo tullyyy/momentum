@@ -1,5 +1,5 @@
 .focus-wrapper {
-    padding-top: 4em;
+    padding-top: 1em;
     z-index: 1;
 }
 
@@ -23,7 +23,7 @@
 
 .main-focus__input {
     width: 100%;
-    padding-top: 4px;
+    padding-top: 2.5px;
     display: block;
     background: 0;
     border: 0;
@@ -41,7 +41,7 @@
 
 .today {
     margin: 17px 0 3px;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 24px;
     text-transform: uppercase;
     text-align: center;
@@ -49,6 +49,6 @@
 }
 
 .todaysFocus {
-    font-size: 34px;
+    font-size: 32px;
     text-align: center;
 }
