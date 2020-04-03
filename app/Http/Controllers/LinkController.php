@@ -22,6 +22,7 @@ class LinkController extends Controller
        
         $links->save();
 
+        return $links;
     }
 
     public function update(Request $request, $id){

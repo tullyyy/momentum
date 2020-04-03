@@ -53,6 +53,7 @@ class Greeting extends React.Component {
                             name="firstName"
                             onChange={this.handleChange}
                             autoComplete="off"
+                            placeholder="your name"
                             // style={ { width: this.state.firstName.length }}
                         />
                     </form>

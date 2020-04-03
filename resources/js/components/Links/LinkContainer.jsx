@@ -23,18 +23,10 @@ class LinksContainer extends Component {
     };
 
     handleBackClicked = () => {
-        this.setState({ createLink: false });
+        this.setState({ createLink: false, itemToEdit: null });
     };
 
     handleLinkSubmit = link => {
-        let { links } = this.state;
-        links.push(link);
-
-        this.setState({
-            createLink: false,
-            links: links
-        });
-
         fetch("/api/links", {
             method: "POST",
             headers: {
@@ -45,7 +37,16 @@ class LinksContainer extends Component {
             .then(response => response.json())
             .then(data => {
                 console.log("Success:", data);
+                link.id = data.id;
+                let { links } = this.state;
+                links.push(link);
+
+                this.setState({
+                    createLink: false,
+                    links: links
+                });
             })
+
             .catch(error => {
                 console.error("Error:", error);
             });
@@ -77,6 +78,18 @@ class LinksContainer extends Component {
             headers: {
                 "Content-Type": "application/json"
             }
+        }).finally(() => {
+            let links = this.state.links.slice();
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].id == this.state.itemToEdit) {
+                    links[i] = Object.assign(links[i], data);
+                }
+            }
+            this.setState({
+                createLink: false,
+                itemToEdit: null,
+                links
+            });
         });
     };
 
@@ -117,6 +130,7 @@ class LinksContainer extends Component {
                     <EditLink
                         item={item}
                         handleEditSubmit={this.handleEditSubmit}
+                        handleClick={this.handleBackClicked}
                     />
                 ) : (
                     <>
