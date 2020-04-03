@@ -13,6 +13,7 @@ class MainFocus extends React.Component {
   handleChange(event){ 
     const {value} = event.target
     localStorage.setItem('focusToday', value);
+    this.setState({focusToday: value});
   }
 
   submitHandler(e) { 
@@ -34,9 +35,8 @@ class MainFocus extends React.Component {
           <input className="main-focus__input" type="text" autoComplete="off" onChange={this.handleChange}  />
         </form>
       )} else { 
-        console.log(this.state);
         return ( 
-          <div>
+          <div className="today-container">
             <p className="today">today</p>
             <p className="todaysFocus" onClick={this.submitHandler}>{ this.state.focusToday}</p>
           </div>
