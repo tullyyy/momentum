@@ -3,6 +3,7 @@ import LinksList from "./LinksList";
 import BuiltInLinks from "./BuiltInLinks";
 import NewLinkButton from "./NewLinkButton";
 import NewLink from "./NewLink";
+import EditLink from "./EditLink";
 import BeatLoad from "./BeatLoad";
 
 class LinksContainer extends Component {
@@ -12,6 +13,7 @@ class LinksContainer extends Component {
         this.state = {
             createLink: false,
             loading: false,
+            itemToEdit: null,
             links: []
         };
     }
@@ -64,14 +66,14 @@ class LinksContainer extends Component {
     handleLinkEdit = id => {
         console.log("editing", id);
         this.setState({
-            links: [
-                ...this.state.links.filter(link => {
-                    return link.id !== id;
-                })
-            ]
+            itemToEdit: id
         });
+    };
+
+    handleEditSubmit = (id, data) => {
         fetch("/api/links/" + id, {
             method: "post",
+            body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json"
             }
@@ -96,12 +98,25 @@ class LinksContainer extends Component {
     };
 
     render() {
+        let item = null;
+
+        if (this.state.itemToEdit) {
+            item = this.state.links.filter(
+                link => link.id == this.state.itemToEdit
+            )[0];
+        }
+
         return (
             <div className="link-container">
                 {this.state.createLink ? (
                     <NewLink
                         handleClick={this.handleBackClicked}
                         handleSubmit={this.handleLinkSubmit}
+                    />
+                ) : this.state.itemToEdit ? (
+                    <EditLink
+                        item={item}
+                        handleEditSubmit={this.handleEditSubmit}
                     />
                 ) : (
                     <>
@@ -111,7 +126,7 @@ class LinksContainer extends Component {
                         ) : (
                             <LinksList
                                 links={this.state.links}
-                                // handleChange={this.handleLinkChange}
+                                handleLinkEdit={this.handleLinkEdit}
                                 deleteLink={this.deleteLink}
                             />
                         )}
